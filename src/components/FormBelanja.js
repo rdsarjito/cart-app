@@ -8,7 +8,6 @@ class FormBelanja extends React.Component {
       this.state = {
         count: '',
         harga: '',
-        totalHarga: '',
         namaBarang: '',
         idCategory: '',
         idBarang: ''
@@ -35,11 +34,11 @@ class FormBelanja extends React.Component {
   
     _handleSubmit(e) {
       e.preventDefault();
-      this.state.totalHarga = parseInt(this.state.harga) * parseInt(this.state.count)
+      const totalHarga = parseInt(this.state.harga) * parseInt(this.state.count)
       this.props.tambahDataBelanja(
         +new Date(), 
         this.state.count, 
-        this.state.totalHarga, 
+        totalHarga, 
         this.state.idCategory,
         this.state.idBarang
       );
