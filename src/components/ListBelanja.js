@@ -5,9 +5,6 @@ import * as actions from '../actions';
 class ListBelanja extends React.Component {
   constructor() {
     super()
-    this.state = {
-      listBelanja: ''
-    }
     this._getNamaBarang = this._getNamaBarang.bind(this);
     this._hapusListHandler = this._hapusListHandler.bind(this);
     this._filteredCategory = this._filteredCategory.bind(this);

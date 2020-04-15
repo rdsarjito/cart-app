@@ -14,7 +14,7 @@ class App extends React.Component {
   };
 
   _tambahCategory() {
-    var getValueCategory = window.prompt('Masukan Category');
+    const getValueCategory = window.prompt('Masukan Category');
     this.props.tambahDataCategory(+new Date(), getValueCategory);
   };
 

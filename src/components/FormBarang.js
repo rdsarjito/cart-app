@@ -24,8 +24,8 @@ class FormBarang extends React.Component {
     this.setState( {harga: e.target.value} );
   };
 
-  _inputCategory(z) {
-    var cariID = this.props.category.filter(e => e.id === parseInt(z.target.value));
+  _inputCategory(e) {
+    var cariID = this.props.category.filter(el => el.id === parseInt(e.target.value));
     this.setState( {
       idCategory: cariID[0].id
     });

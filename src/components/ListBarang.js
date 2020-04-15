@@ -5,15 +5,11 @@ import * as actions from '../actions';
 class ListBarang extends React.Component {
   constructor() {
     super()
-    this.state = {
-      listBarang: ''
-    }
     this._hapusListHandler = this._hapusListHandler.bind(this);
   };
 
   _hapusListHandler(id) {
     this.props.hapusDataBarang(id);
-    this.setState( {listBarang: this.props.barangs} )
   };
 
   render() {
